@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KenPoem - Explore Poems</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const menuItems = mobileMenu.querySelector('ul');
+        
+            menuIcon.addEventListener('click', function() {
+                menuItems.classList.toggle('active');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- <img src="images/icon.png" alt="Your Logo"> -->
+             <p><span>Ken</span>Poem</p>
+        </div>
+        <nav id="mobile-menu">
+            <div id="menu-icon">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+            <ul>
+                <li><a href="index.html" class="current">Home</a></li>
+                <li><a href="poems.html">Poems</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="intro">
+        <h2>The Poem Gallery</h2>
+        <p><b><span style="color: #ff0040;">Ken</span>Poem Gallery</b> is a collection of poetic reflections on the wonders of nature and the human experience. Each poem seeks to evoke emotions and spark imaginations. Whether you seek inspiration, solace, or simply a moment of beauty, we invite you to delve into our curated selection of poems.</p>
+        <p>Enjoy your journey through landscapes painted with words.</p>
+        <a href="#poems" class="read-more-btn">Explore Poems →</a>
+    </div>
+
+    <div class="card-container" id="poems">
+        <div class="card">
+            <img src="/images/47.jpeg" alt="Poem 1 Image">
+            <div class="card-content">
+                <h2>A Starry Night</h2>
+                <p>Under the velvet canopy, stars whisper tales of eternity...</p>
+                <a href="#" class="read-more-btn">Read More →</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="/images/36.jpeg" alt="Poem 2 Image">
+            <div class="card-content">
+                <h2>Misty Mornings</h2>
+                <p>In the misty morning, dreams float like fog over fields...</p>
+                <a href="#" class="read-more-btn">Read More →</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/9.jpeg" alt="Poem 3 Image">
+            <div class="card-content">
+                <h2>Utah Sunsets</h2>
+                <p>Sunset paints the canyon, a tapestry of gold and crimson...</p>
+                <a href="#" class="read-more-btn">Read More →</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/29.jpeg" alt="Poem 4 Image">
+            <div class="card-content">
+                <h2>Whispering Pines</h2>
+                <p>Through the whispering pines, the wind sings ancient songs...</p>
+                <a href="#" class="read-more-btn">Read More →</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/38.jpeg" alt="Poem 5 Image">
+            <div class="card-content">
+                <h2>Golden Shores</h2>
+                <p>Golden shores at dusk, where the waves kiss the sand...</p>
+                <a href="#" class="read-more-btn">Read More →</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/40.jpeg" alt="Poem 6 Image">
+            <div class="card-content">
+                <h2>Autumn Leaves</h2>
+                <p>Autumn leaves fall, painting the earth in hues of red and gold...</p>
+                <a href="#" class="read-more-btn">Read More →</a>
+            </div>
+        </div>
+    </div>
+
+    <a href="poems.html" class="read-more-btn" style="margin: 30px auto;">Keep Exploring →</a>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 <b><span style="color: #ff0040;">Ken</span>Poem.</b> All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const exploreBtn = document.querySelector('.read-more-btn');
+
+            exploreBtn.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const offsetTop = targetElement.offsetTop;
+                
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
